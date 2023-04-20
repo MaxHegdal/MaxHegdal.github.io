@@ -2,6 +2,7 @@
   "name": "maxhegdal.github.io",
   "private": false,
   "version": "0.1.0",
+  "license": "UNLICENSED",
   "homepage": "https://MaxHegdal.github.io ",
   "type": "module",
   "scripts": {
