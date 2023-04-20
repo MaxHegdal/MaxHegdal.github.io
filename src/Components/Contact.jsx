@@ -1,7 +1,6 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import Map from "./Map";
-
 
 const Section = styled.div`
   height: 100vh;

@@ -1,4 +1,4 @@
-import React, {Suspense} from "react";
+import React, { Suspense } from "react";
 import styled from "styled-components";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
@@ -34,7 +34,7 @@ const Line = styled.img`
   height: 5px;
 `;
 const Subtitle = styled.h2`
-  color: #FC8AE6;
+  color: #fc8ae6;
 `;
 const Desc = styled.p`
   font-size: 24px;
@@ -42,7 +42,7 @@ const Desc = styled.p`
 `;
 
 const Button = styled.button`
-  background-color: #FC8AE6;
+  background-color: #fc8ae6;
   color: white;
   font-weight: 500;
   width: 100px;
