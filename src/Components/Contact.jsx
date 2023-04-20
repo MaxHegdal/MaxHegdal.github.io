@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
 import styled from "styled-components";
 import Map from "./Map";
 
@@ -60,35 +59,11 @@ const Right = styled.div`
 `;
 
 const Contact = () => {
-  const ref = useRef();
-  const [success, setSuccess] = useState(null);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_td45yo7",
-        "template_s3vgkl2",
-        ref.current,
-        "pIkcZUC4794Up3I3e"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setSuccess(true);
-        },
-        (error) => {
-          console.log(error.text);
-          setSuccess(false);
-        }
-      );
-  };
   return (
     <Section>
       <Container>
         <Left>
-          <Form ref={ref} onSubmit={handleSubmit}>
+          <Form>
             <Title>Skriv till mi</Title>
             <Input placeholder="Name" name="name"></Input>
             <Input placeholder="Email"></Input>
@@ -98,8 +73,6 @@ const Contact = () => {
               rows={10}
             ></TextArea>
             <Button type="submit">Send</Button>
-            {success &&
-            "Your message has been sent!"}
           </Form>
         </Left>
         <Right>
