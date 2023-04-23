@@ -1,12 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import {
-  OrbitControls,
-  PerspectiveCamera,
-  RenderTexture,
-} from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import { MeshStandardMaterial } from "three";
+import WorldofWarcraft from "./WorldofWarcraft";
+import Valorant from "./Valorant";
+
 
 const data = [
   "World of Warcraft",
@@ -74,19 +70,26 @@ const ListItem = styled.li`
 `;
 
 const Works = () => {
+  const [work, setWork] = useState("Web Design");
   return (
     <Section>
       <Container>
         <Left>
           <List>
             {data.map((item) => (
-              <ListItem key={item} text={item}>
+              <ListItem key={item} text={item} onClick={()=>setWork(item)}>
                 {item}
               </ListItem>
             ))}
           </List>
         </Left>
-        <Right></Right>
+        <Right>
+          {work === "World of Warcraft" ? (
+            <WorldofWarcraft />
+          ) : ( 
+            <Valorant/>
+            )}
+        </Right>
       </Container>
     </Section>
   );
