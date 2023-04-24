@@ -102,12 +102,12 @@ const Hero = () => {
             <Suspense fallback={null}>
               <ambientLight intensity={1} />
               <directionalLight position={[3, 2, 1]} />
-              <Sphere args={[1, 100, 200]} scale={1.7}>
+              <Sphere args={[1, 100, 200]} scale={2}>
                 <MeshDistortMaterial
                   color="#3d1c56"
                   attach="material"
                   distort={0.7}
-                  speed={2}
+                  speed={5}
                 />
               </Sphere>
               <OrbitControls enableZoom={false} autoRotate />
